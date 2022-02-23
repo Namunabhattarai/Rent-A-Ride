@@ -1,0 +1,11 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800);
+
+.card img:hover{
+filter: brightness(50%)
+}
+.card .card-body{
+    background-color:#ced6e0;
+} 
+.card .card-body:hover{
+    background-color:#70a1ff;
+}
