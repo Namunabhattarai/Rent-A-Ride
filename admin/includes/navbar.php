@@ -58,7 +58,17 @@
 <li class="nav-item">
   <a class="nav-link" href="orders.php">
   <i class="fas fa-shopping-cart"></i>
+    <span>Rents</span></a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="shop-orders.php">
+  <i class="fas fa-shopping-cart"></i>
     <span>Orders</span></a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="services.php">
+  <i class="fas fa-shopping-cart"></i>
+    <span>Services</span></a>
 </li>
 
 

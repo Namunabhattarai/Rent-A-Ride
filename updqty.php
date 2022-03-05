@@ -5,11 +5,12 @@ include("config.php");
 $cartid=$_POST['cart_id'];
 $qty=$_POST['qty'];
 
-$upd="UPDATE mycart SET quantity='$qty' WHERE cartid='$cartid'";
+$upd="UPDATE mycart SET quantity='$qty' WHERE cart_id='$cartid'";
 $connection->query($upd);
 
 ?>
-<table class="table table-bordered">
+<div class="table-content table-responsive">
+                    <table class="table table-bordered" id="crt_table">
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>
@@ -47,14 +48,14 @@ $connection->query($upd);
                                     <td><img src="<?php echo 'img/shop/'.$row['image']?>" height="100px" alt=""></td>
                                     <td class="product-qty">
                                                     <div class="input-group-control">
-                                                        <form id="frm<?php echo $row['cartid']; ?>">
-                                                            <input type="hidden" name="cart_id" value="<?php echo $row['cartid'];;?>">
-                                                            <input type="number" class="quantity-input" name="qty" value="<?php echo $row['quantity']; ?>" onchange="updcart(<?php echo $row['cartid'];;  ?>)" onkeyup="updcart(<?php echo $row['cartid'];;  ?>)" style="width: 100px;" max="5" min="1" size="2">
+                                                        <form id="frm<?php echo $row['cart_id']; ?>">
+                                                            <input type="hidden" name="cart_id" value="<?php echo $row['cart_id'];;?>">
+                                                            <input type="number" class="quantity-input" name="qty" value="<?php echo $row['quantity']; ?>" onchange="updcart(<?php echo $row['cart_id'];;  ?>)" onkeyup="updcart(<?php echo $row['cart_id'];;  ?>)" style="width: 100px;" max="5" min="1" size="2">
                                                         
                                                         </form>
                                                     </div>
                                     </td>
-                                    <td class="item-total"><?php echo $row['qty']*$row['price']; ?></td>
+                                    <td class="item-total"><?php echo $row['quantity']*$row['price']; ?></td>
                                     <td> <a href="rent.php?itemno=<?php echo $row['cart_id']; ?>"><button class="btn btn-success">Buy Now</button></a>   </td>
                                     
                                     
@@ -75,4 +76,5 @@ $connection->query($upd);
                 
                                                                         
                         </tbody>
-</table>
+                    </table>
+</div>

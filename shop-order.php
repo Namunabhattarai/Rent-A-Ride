@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
 
 
 
-	$query1 = "INSERT INTO shop-order(order_no,name,email,phone,address,brand,price,date,paymentMethod) VALUES ('$order_no','$name','$email','$phone','$address','$brand','$price','$date','$paymentMethod')";
+	$query1 = "INSERT INTO shop_order(order_no,name,email,phone,address,p_name,p_price,p_size,p_color,quantity,payment) VALUES ('$order_no','$name','$email','$phone','$address','$product','$price','$size','$color','$quantity',$paymentMethod')";
 	$query_run1 = mysqli_query($connection, $query1);
 			
 			if($query_run1){
@@ -58,7 +58,7 @@ if(isset($_POST['submit']))
 <body>
 <div id="banner"></div>
 <div id="booking" class="section mt-5">
-		<div class="section-center">
+ 		<div class="section-center">
 			<div class="container">
 				<div class="row">
 			
@@ -90,17 +90,17 @@ if(isset($_POST['submit']))
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Email</span>
-										<input class="form-control" name="email" type="email" placeholder="Enter your email">
+										<input class="form-control" name="email" type="email" placeholder="Enter your email" required>
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Phone</span>
-								<input class="form-control" type="tel" name="phone" placeholder="Enter your phone number">
+								<input class="form-control" type="tel" name="phone" placeholder="Enter your phone number" required>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Delivery Location</span>
-								<input class="form-control" type="text" name="address" placeholder="Enter Delivery Location">
+								<input class="form-control" type="text" name="address" placeholder="Enter Delivery Location" required>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Product Name</span>
@@ -120,7 +120,7 @@ if(isset($_POST['submit']))
 							</div>
                             <div class="form-group">
 								<span class="form-label">Quantity</span>
-								<input class="form-control" type="text" name="quantity" placeholder=" Quantity" readonly>
+								<input class="form-control" type="text" name="quantity" placeholder=" Quantity">
 							</div>
 							
 							<div class="form-group">

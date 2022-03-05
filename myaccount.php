@@ -147,7 +147,7 @@
                                                         
                                                         include('config.php');
                                                         $id=$_SESSION['username'];
-                                                        $query = "SELECT * FROM orders where name='$id'";
+                                                        $query = "SELECT * FROM shop_order where name='$id'";
                                                         $query_run = mysqli_query($connection, $query);
                                                     ?>
                                                     <table class="table table-bordered">
@@ -157,11 +157,13 @@
                                                             <th>Name</th>
                                                             <th>Email</th>
                                                             <th>Address</th>
-                                                            <th>Brand </th>
+                                                            <th>Product Name </th>
                                                             <th>Price </th>
-                                                            <th>OrderDate </th>
-                                                            <th>Payment</th>
-                                                        
+                                                            <th>Size </th>
+                                                            <th>Color</th>
+                                                            <th>Quantity</th>
+                                                            <th>Total Price</th>
+                                                             <th>Payment</th>
                                                             <th>DELETE </th>
                                                             </tr>
                                                         </thead>
@@ -178,10 +180,13 @@
                                                                     <td><?php echo $row['email'];?>.</td>
                                                                    
                                                                     <td><?php echo $row['address'];?></td>
-                                                                    <td><?php echo $row['brand'];?></td>
-                                                                    <td><?php echo $row['price'];?></td>
-                                                                    <td><?php echo $row['date'];?></td>
-                                                                    <td><?php echo $row['paymentMethod'];?></td>
+                                                                    <td><?php echo $row['p_name'];?></td>
+                                                                    <td><?php echo $row['p_price'];?></td>
+                                                                    <td><?php echo $row['p_size'];?></td>
+                                                                    <td><?php echo $row['p_color'];?></td>
+                                                                    <td><?php echo $row['quantity'];?></td>
+                                                                    <td><?php echo $row['quantity']*$row['p_price']; ?></td>
+                                                                    <td><?php echo $row['payment'];?></td>
                                                                         
                                                                         <td>
                                                                             <form action="myorders-code.php" method="post">
