@@ -119,42 +119,42 @@ include('includes/scripts-inventory.php');
                                 <div class="row justify-content-center">
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="popular-selling-items">
-                                            <a href="#"><img src="img/brand/popular_brand01.jpg" alt=""></a>
+                                            <a href="bww.php"><img src="img/brand/bmw.jpg" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="popular-selling-items">
-                                            <a href="#"><img src="img/brand/popular_brand02.jpg" alt=""></a>
+                                            <a href="audi.php"><img src="img/brand/audi.jpg" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="popular-selling-items">
-                                            <a href="#"><img src="img/brand/popular_brand03.jpg" alt=""></a>
+                                            <a href="porsche.php"><img src="img/brand/porshe.jpg" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="popular-selling-items">
-                                            <a href="#"><img src="img/brand/popular_brand04.jpg" alt=""></a>
+                                            <a href="chevrolet.php"><img src="img/brand/chevrolet.png" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="popular-selling-items">
-                                            <a href="#"><img src="img/brand/popular_brand05.jpg" alt=""></a>
+                                            <a href="pulsar.php"><img src="img/brand/pulsar.jpg" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="popular-selling-items">
-                                            <a href="#"><img src="img/brand/popular_brand06.jpg" alt=""></a>
+                                            <a href="duke.php"><img src="img/brand/duke.jpg" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="popular-selling-items">
-                                            <a href="#"><img src="img/brand/popular_brand07.jpg" alt=""></a>
+                                            <a href="yamaha.php"><img src="img/brand/yamaha.png" alt=""></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-6">
                                         <div class="popular-selling-items">
-                                            <a href="#"><img src="img/brand/popular_brand08.jpg" alt=""></a>
+                                            <a href="royal.php"><img src="img/brand/royal.jpg" alt=""></a>
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +229,7 @@ include('includes/scripts-inventory.php');
                                                   <a href="rent-car.php?itemno=<?php echo $row['car_id']; ?>">Rent Now</a>
                                                   
                                               </li>
-                                              <li class="price"><?php echo $row['price'];?><span>/mo</span></li>
+                                              <li class="price"><?php echo $row['price'];?><span>/day</span></li>
                                               </ul>
                                             </div>
                                         </div>
@@ -270,7 +270,7 @@ include('includes/scripts-inventory.php');
                                               <li class="option">
                                                   <a href="rent-bike.php?itemno=<?php echo $row['bike_id']; ?>">Rent Now</a>
                                               </li>
-                                              <li class="price"><?php echo $row['price'];?><span>/mo</span></li>
+                                              <li class="price"><?php echo $row['price'];?><span>/day</span></li>
                                               </ul>
                                             </div>
                                         </div>

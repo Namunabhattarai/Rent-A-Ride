@@ -15,7 +15,9 @@ include('includes/scripts-inventory.php');
 include('config.php');
 if(isset($_POST['submit']))
 {
-	$order_no='ord'.rand(100,500);
+	$today = date("Ymd");
+	$rand = strtoupper(substr(uniqid(sha1(time())),0,4));
+	$order_no= $today . $rand;
 	$name = $_POST['name'];
     $email = $_POST['email'];
 	$phone = $_POST['phone'];
@@ -30,8 +32,8 @@ if(isset($_POST['submit']))
 
 
 
-	$query1 = "INSERT INTO shop_order(order_no,name,email,phone,address,p_name,p_price,p_size,p_color,quantity,payment) VALUES ('$order_no','$name','$email','$phone','$address','$product','$price','$size','$color','$quantity',$paymentMethod')";
-	$query_run1 = mysqli_query($connection, $query1);
+	$query1 = "INSERT INTO shop_order(order_no,name,email,phone,address,p_name,p_price,p_size,p_color,quantity,payment) VALUES ('$order_no','$name','$email','$phone','$address','$product','$price','$size','$color','$quantity','$paymentMethod')";
+	$query_run1 = mysqli_query($connection,$query1);
 			
 			if($query_run1){
 				echo "<script>window.location.href='myaccount.php';</script>";

@@ -96,7 +96,7 @@ include('includes/scripts-inventory.php');
                                                 <a href="rent-car.php?itemno=<?php echo $row['car_id']; ?>">Rent Now</a>
                                                 
                                             </li>
-                                            <li class="price"><?php echo $row['price'];?><span>/mo</span></li>
+                                            <li class="price"><?php echo $row['price'];?><span>/day</span></li>
                                         </ul>
                                     </div>
                                   

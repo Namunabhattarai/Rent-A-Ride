@@ -55,7 +55,7 @@ include('includes/scripts-inventory.php');
                                             <span>
                                                 <?php 
                                                 include('config.php');
-                                                $query = "SELECT bike_id FROM bike_list WHERE brand_name='royalenfield'";  
+                                                $query = "SELECT bike_id FROM bike_list WHERE brand_name='royal enfield'";  
                                                 $query_run = mysqli_query($connection, $query);
                                                 $row = mysqli_num_rows($query_run);
                                                 echo $row;
@@ -78,7 +78,7 @@ include('includes/scripts-inventory.php');
                         <div class="col-xl-8 col-lg-7 col-md-9">
                             <?php
                             include('config.php');
-                            $query = "SELECT * FROM bike_list WHERE brand_name='royalenfield'";
+                            $query = "SELECT * FROM bike_list WHERE brand_name='royal enfield'";
                             $query_run = mysqli_query($connection, $query);
                             if(mysqli_num_rows($query_run) > 0)        
                             {
